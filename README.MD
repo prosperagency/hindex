@@ -1,0 +1,1 @@
+hindex injects an index in hindsight. Now you can focus on your content and dynamically generate a fully nested and hyperlinked index of headings.
