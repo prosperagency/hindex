@@ -1,8 +1,8 @@
 $.fn.hindex = function () {
 	var heading = 1;
-	var hindex = '<ol class="hindex-h1">';
+	var hindex = '<ol class="l1">';
 	
-	$ ("h1, h2, h3, h4").each (function (index, value) {
+	$ ("h1, h2, h3, h4, h5, h6").each (function (index, value) {
 		if ($ (this).hasClass ("hindexception")) {
 			return true;
 		}
@@ -15,7 +15,7 @@ $.fn.hindex = function () {
 		if (difference < 0) {
 			for (difference; difference < 0; difference ++) {
 				heading ++;
-				hindex += "<ol class='hindex-h" + heading + "'>";
+				hindex += "<ol class='l" + heading + "'>";
 			}
 		}
 		else if (difference > 0) {
@@ -28,7 +28,7 @@ $.fn.hindex = function () {
 		hindex += "<li><a href='#" + id + "'>" + $ (this).text () + "</a></li>";
 	});
 		
-	hindex += "</ol><!-- ol.hindex-h1 -->";
+	hindex += "</ol><!-- ol.l1 -->";
 	
 	$ (this).html (hindex);
 };
